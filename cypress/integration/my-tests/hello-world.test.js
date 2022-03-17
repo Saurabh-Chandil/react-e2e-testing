@@ -10,9 +10,14 @@ describe("e2e test", () => {
         // cy.get('h2#home-downloadhead').contains('Download for Windows (x64)')
         //cy.get('div#home-downloadhead') // not found
 
-        // cy.get('h2#home-downloadhead')
-        // .should('have.text', 'Download for Windows (x64)')
+        cy.get('h2#home-downloadhead')
+        .should('have.text', 'Download for Windows (x64)')        
         
+        //cy.viewport(500, 400)
+        //cy.viewport('iphone-xr')
 
+        cy.get('div#home-intro p:first>a')
+        .should('have.text', "Chrome's V8 JavaScript engine")
+        .click()
     })
 })
